@@ -24,7 +24,16 @@
     "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.5",
+    "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
     "prettier": "2.1.2"
   },
   "keywords": [
@@ -34,10 +43,11 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
+    "lint": "eslint src/**/*.js --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "clean": "gatsby clean && yarn cache clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
@@ -47,5 +57,4 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby-tailwind-boilerplate/issues"
   }
-  
 }
