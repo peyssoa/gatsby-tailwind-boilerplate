@@ -43,10 +43,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
-    "lint": "eslint src/**/*.js",
-    "lint:fix": "eslint src/**/*.js --fix",
-    "start": "npm run develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "yarn clean && yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean && yarn cache clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
