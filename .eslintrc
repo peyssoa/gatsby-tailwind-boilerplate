@@ -3,21 +3,14 @@
         "node": true
     },
     "parser": "babel-eslint",
-    "extends": "airbnb",
-    "rules": {
-        "import/extensions": "off",
-        "import/no-cycle": "off",
-        "no-shadow": "off",
-        "no-case-declarations": "off",
-        "react/jsx-props-no-spreading": "off",
-        "quotes": "off",
-        "indent": "off",
-        "import/no-named-as-default": 0,
-        "react/jsx-indent": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "import/no-named-as-default-member": "off",
-        "react/jsx-one-expression-per-line": "off",
-        "object-curly-newline": "off",
-        "comma-dangle": "off"
-      }
+    "plugins": ["react"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
 }
